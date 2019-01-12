@@ -1,5 +1,6 @@
 {
-    "full_name": "Your name",
+    "repo_name": "latex-resume-template",
+	"full_name": "Your name",
     "email": "Your home email (eq. you@example.com)",
 	"title": "Someone's Resume",
 	"home_address_1": "Address 1",
@@ -9,5 +10,5 @@
 	"work_address_1": "Address 1",
 	"work_address_2": "Address 2",
 	"work_phone": "Work phone",
-	"work_email": "Your home email (eq. you@example.com)",
+	"work_email": "Your home email (eq. you@example.com)"
 }
