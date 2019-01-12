@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Professional Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygrey}{gray}{0.80}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+%\usepackage{helvet} % Default font is the helvetica postscript font
+\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\newsectionwidth{0pt} % Stops section indenting
+
+\title{ {{cookiecutter.title}} }
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND ADDRESSES SECTION
+%----------------------------------------------------------------------------------------
+
+\name{ {{cookiecutter.full_name}} \\ \\} % Your name at the top
+
+% If you don't want one of the addresses, simply remove all the text in the first or second \address{} bracket
+
+\address{{\bf Home Address} \\ {{cookiecutter.home_address_1}} \\ {{cookiecutter.home_address_2}} \\ {{cookiecutter.home_phone}} \\ {{cookiecutter.home_email}} } % Your address 1
+
+\address{{\bf Work Address} \\ {{cookiecutter.work_name}} \\ {{cookiecutter.work_address_1}} \\ {{cookiecutter.work_address_2}} \\ {{cookiecutter.work_phone}} \\ {{cookiecutter.work_email}} } % Your address 2
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\input{summary.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\input{experience.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\input{education.tex}
+
+%----------------------------------------------------------------------------------------
+ 
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	PATENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\input{patents.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\input{technical_skills.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\input{certifications.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+
+\input{memberships.tex}
+
+%----------------------------------------------------------------------------------------
+
+%\vspace{0.2in} % Some white space between sections
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\input{interests.tex}
+
+%----------------------------------------------------------------------------------------
+
+\end{resume} 
+\end{document}
