@@ -1,8 +1,9 @@
 {
     "repo_name": "latex-resume-template",
+	"font": ["New Century", "Helvetica"],
+	"title": "My Resume",
 	"full_name": "Your name",
     "email": "Your home email (eq. you@example.com)",
-	"title": "Someone's Resume",
 	"home_address_1": "Address 1",
 	"home_address_2": "Address 2",
 	"home_phone": "Home phone",
@@ -10,5 +11,8 @@
 	"work_address_1": "Address 1",
 	"work_address_2": "Address 2",
 	"work_phone": "Work phone",
-	"work_email": "Your home email (eq. you@example.com)"
+	"work_email": "Your work email (eq. you@example.com)"
+	"include_summary": "y",
+	"include_experience": "y",
+	"include_education": "y",
 }
