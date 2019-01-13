@@ -1,5 +1,8 @@
 {
-    "repo_name": "latex-resume-template",
+    "_copy_without_render": [
+		"*.cls"
+	],
+	"repo_name": "latex-resume-template",
 	"font": ["New Century", "Helvetica"],
 	"title": "My Resume",
 	"full_name": "Your name",

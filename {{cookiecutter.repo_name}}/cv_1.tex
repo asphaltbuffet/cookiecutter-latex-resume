@@ -33,6 +33,7 @@
 
 {%- elif cookiecutter.font == "New Century" -%}
 \usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+{%- endif -%}
 
 \newsectionwidth{0pt} % Stops section indenting
 
@@ -55,7 +56,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{resume}
-{%- if cookiecutter.prompt.read_user_yes_no -%}
+{%- if "y" in cookiecutter.include_summary|lower or "t" in cookiecutter.include_summary|lower -%}
 %----------------------------------------------------------------------------------------
 %	SUMMARY SECTION
 %----------------------------------------------------------------------------------------
@@ -65,13 +66,13 @@
 %----------------------------------------------------------------------------------------
 
 %\vspace{0.2in} % Some white space between sections
-{%- endif -%}
+{%- endif%}
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-{%- if cookiecutter.include_experience == "y" -%}
+
 \input{experience.tex}
-{%- endif -%}
+
 %----------------------------------------------------------------------------------------
 
 %\vspace{0.2in} % Some white space between sections
