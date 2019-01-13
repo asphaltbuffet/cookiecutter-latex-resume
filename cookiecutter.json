@@ -11,7 +11,7 @@
 	"work_address_1": "Address 1",
 	"work_address_2": "Address 2",
 	"work_phone": "Work phone",
-	"work_email": "Your work email (eq. you@example.com)"
+	"work_email": "Your work email (eq. you@example.com)",
 	"include_summary": "y",
 	"include_experience": "y",
 	"include_education": "y",
