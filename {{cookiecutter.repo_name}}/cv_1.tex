@@ -28,11 +28,11 @@
 \definecolor{mygrey}{gray}{0.80}
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 {% endraw %}
-{%- if cookiecutter.font == "Helvetica" -%}
-\usepackage{helvet} % Default font is the helvetica postscript font
 
+{%- if cookiecutter.font == "Helvetica" -%}
+\usepackage{helvet} % helvetica postscript font
 {%- elif cookiecutter.font == "New Century" -%}
-\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\usepackage{newcent} % new century schoolbook postscript font
 {%- endif -%}
 
 \newsectionwidth{0pt} % Stops section indenting
@@ -56,6 +56,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{resume}
+
 {%- if "y" in cookiecutter.include_summary|lower or "t" in cookiecutter.include_summary|lower -%}
 %----------------------------------------------------------------------------------------
 %	SUMMARY SECTION
@@ -66,7 +67,9 @@
 %----------------------------------------------------------------------------------------
 
 %\vspace{0.2in} % Some white space between sections
+
 {%- endif%}
+{%- if "y" in cookiecutter.include_experience|lower or "t" in cookiecutter.include_experience|lower -%}
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
@@ -77,6 +80,7 @@
 
 %\vspace{0.2in} % Some white space between sections
 
+{%- endif -%}
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
