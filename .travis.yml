@@ -8,6 +8,7 @@ install:
 before_script:
     - cookiecutter --no-input .
     - cd latex-resume-template
+    - ls
 
 script:
   # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
