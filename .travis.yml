@@ -1,0 +1,18 @@
+sudo: required
+language: generic
+services: docker
+
+install:
+    - sudo pip install cookiecutter
+    
+before_script:
+    - cookiecutter --no-input .
+  #  - cd cookiecutter-resume-latex
+
+script:
+  # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
+  - docker pull dxjoke/tectonic-docker
+  # Compiling only main.tex:
+  - docker run --mount src=$TRAVIS_BUILD_DIR/cookiecutter-latex-resume,target=/usr/cookiecutter-latex-resume/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic cv1.tex"
+  # Compiling multiple files as well as using biber:
+#  - docker run --mount src=$TRAVIS_BUILD_DIR/cookiecutter-latex-resume,target=/usr/cookiecutter-latex-resume/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 biber-mwe.tex; biber biber-mwe; tectonic biber-mwe.tex; tectonic cv1.tex"

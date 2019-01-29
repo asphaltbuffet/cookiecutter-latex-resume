@@ -14,6 +14,9 @@
 % .tex file. The res.cls file provides the resume style used for structuring the
 % document.
 %
+% Additional Author:
+% Ben Lechlitner, otherland@gmail.com - Conversion via cookiecutter templating.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
@@ -21,19 +24,16 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
-{% raw %}
-\usepackage{multicol}
+
+{% raw %}\usepackage{multicol}
 \usepackage{color}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{mygrey}{gray}{0.80}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
-{% endraw %}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}{% endraw %}
 
-{%- if cookiecutter.font == "Helvetica" -%}
-\usepackage{helvet} % helvetica postscript font
-{%- elif cookiecutter.font == "New Century" -%}
-\usepackage{newcent} % new century schoolbook postscript font
-{%- endif -%}
+{% if cookiecutter.font == "Helvetica" %}\usepackage{helvet} % helvetica postscript font
+{% elif cookiecutter.font == "New Century" %}\usepackage{newcent} % new century schoolbook postscript font
+{%- endif %}
 
 \newsectionwidth{0pt} % Stops section indenting
 
@@ -57,7 +57,7 @@
 
 \begin{resume}
 
-{%- if "y" in cookiecutter.include_summary|lower or "t" in cookiecutter.include_summary|lower -%}
+{%- if "y" in cookiecutter.include_summary|lower or "t" in cookiecutter.include_summary|lower %}
 %----------------------------------------------------------------------------------------
 %	SUMMARY SECTION
 %----------------------------------------------------------------------------------------
@@ -66,10 +66,9 @@
 
 %----------------------------------------------------------------------------------------
 
-%\vspace{0.2in} % Some white space between sections
+%\vspace{0.2in} % Some white space between sections{% endif %}
 
-{%- endif%}
-{%- if "y" in cookiecutter.include_experience|lower or "t" in cookiecutter.include_experience|lower -%}
+{%- if "y" in cookiecutter.include_experience|lower or "t" in cookiecutter.include_experience|lower %}
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
@@ -78,9 +77,9 @@
 
 %----------------------------------------------------------------------------------------
 
-%\vspace{0.2in} % Some white space between sections
+%\vspace{0.2in} % Some white space between sections{% endif %}
 
-{%- endif -%}
+{%- if "y" in cookiecutter.include_education|lower or "t" in cookiecutter.include_education|lower %}
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
@@ -89,7 +88,7 @@
 
 %----------------------------------------------------------------------------------------
  
-%\vspace{0.2in} % Some white space between sections
+%\vspace{0.2in} % Some white space between sections{% endif %}
 
 %----------------------------------------------------------------------------------------
 %	PATENTS SECTION
