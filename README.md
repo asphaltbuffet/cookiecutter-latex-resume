@@ -3,6 +3,8 @@ cookiecutter-latex-resume
 
 A cookiecutter template to help create professional resumes in LaTeX.
 
+[![Build Status](https://travis-ci.org/asphaltbuffet/cookiecutter-latex-resume.svg?branch=master)](https://travis-ci.org/asphaltbuffet/cookiecutter-latex-resume)
+
 Requirements
 ------------
 Install `cookiecutter` command line: `pip install cookiecutter`    
